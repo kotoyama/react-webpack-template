@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "useBuiltIns": "usage", "corejs": 3 }],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["effector/babel-plugin", { "addLoc": true }],
+    "babel-plugin-styled-components",
+    "@babel/plugin-syntax-dynamic-import",
+    "react-hot-loader/babel"
+  ]
+}

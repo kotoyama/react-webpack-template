@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint/eslint-plugin", "react", "unicorn"],
+  "extends": ["react-app", "prettier"],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "env": { "jest": true }
+    },
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-plugin/recommended",
+        "plugin:@typescript-eslint/eslint-plugin/eslint-recommended"
+      ]
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
