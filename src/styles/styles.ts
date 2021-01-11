@@ -14,9 +14,11 @@ export default createGlobalStyle`
       @media screen and (max-width: ${theme.widthSizes.desktop}px) {
         font-size: 16px;
       }
+
       @media screen and (max-width: ${theme.widthSizes.tablet}px) {
         font-size: 15px;
       }
+
       @media screen and (max-width: ${theme.widthSizes.phone}px) {
         font-size: 14px;
       }
