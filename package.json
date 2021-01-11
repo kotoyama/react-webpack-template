@@ -25,6 +25,7 @@
     "@types/nanoid": "^2.1.0",
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.0",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
@@ -57,6 +58,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "pnp-webpack-plugin": "^1.6.4",
+    "polished": "^4.0.5",
     "postcss": "^7.0.32",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
@@ -77,13 +79,16 @@
   "dependencies": {
     "@hot-loader/react-dom": "^16.13.0",
     "@tanem/react-nprogress": "^3.0.34",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "effector": "^21.2.2",
     "effector-react": "^21.0.4",
+    "history": "^5.0.0",
     "nanoid": "^3.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hot-loader": "^4.12.21"
+    "react-hot-loader": "^4.12.21",
+    "react-router-dom": "^5.2.0"
   },
   "husky": {
     "hooks": {
