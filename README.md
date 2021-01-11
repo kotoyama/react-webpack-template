@@ -6,7 +6,7 @@
 - [PostCSS](https://github.com/postcss/postcss)
 - [Babel](https://github.com/babel/babel)
 - [Webpack](https://github.com/webpack/webpack)
-- [React](https://github.com/facebook/react) & [React DOM](https://github.com/facebook/react)
+- [React](https://github.com/facebook/react)
 - [Effector](https://github.com/effector/effector)
 - [Styled Components](https://github.com/styled-components)
 - [ESLint](https://github.com/eslint/eslint) & [Prettier](https://github.com/prettier/prettier)
