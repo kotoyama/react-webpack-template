@@ -4,6 +4,9 @@ node_modules
 # webpack
 config
 
+# babel
+babel.config.js
+
 # static
 public
 

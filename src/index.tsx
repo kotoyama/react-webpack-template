@@ -6,7 +6,7 @@ import { createBrowserHistory } from 'history'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, GlobalStyles } from 'styles'
 
-import App from './app'
+import { App } from './app'
 
 const history = createBrowserHistory()
 

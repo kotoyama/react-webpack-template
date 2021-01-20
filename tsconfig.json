@@ -18,6 +18,13 @@
     "pretty": true,
     "sourceMap": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["build", "config", "node_modules", "public"]
+  "include": ["src"],
+  "exclude": [
+    "build",
+    "config",
+    "node_modules",
+    "public",
+    "babel.config.js",
+    "jest.config.js"
+  ]
 }
