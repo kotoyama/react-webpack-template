@@ -1,4 +1,29 @@
+# dependencies
 node_modules
-public
+
+# webpack
 config
+
+# static
+public
+
+# testing
+coverage
+jest.config.js
+
+# production
 build
+dist
+
+# env
+.env
+
+# misc
+.idea
+.vscode
+.DS_Store
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

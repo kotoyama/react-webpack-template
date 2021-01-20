@@ -1,9 +1,16 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint/eslint-plugin", "react", "unicorn"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin", "react"],
   "extends": ["react-app", "prettier"],
   "env": {
+    "es2020": true,
     "browser": true,
     "jest": true,
     "node": true
