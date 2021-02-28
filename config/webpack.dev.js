@@ -1,4 +1,5 @@
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
 const postcssNormalize = require('postcss-normalize')
@@ -114,5 +115,6 @@ module.exports = merge(common, {
       exclude: /a\.js|node_modules/,
     }),
     new FriendlyErrorsWebpackPlugin(),
+    new CaseSensitivePathsPlugin(),
   ],
 })
