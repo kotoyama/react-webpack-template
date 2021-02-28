@@ -82,9 +82,3 @@ export default createGlobalStyle`
   ${fontFace('GothamPro', 'GothamPro-Bold', 600)}
 `
 ```
-
-## TODO
-
-- [ ] Storybook
-- [ ] Jest & React Testing Library
-- [ ] Migrate to Webpack v5
