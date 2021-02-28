@@ -4,21 +4,30 @@ const isDevelopment =
   process.env.NODE_ENV === 'development'
 
 const presetReact = {
-  development: isDevelopment,
   useBuiltIns: true,
   runtime: 'automatic',
 }
 
 const presetEnv = {
-  useBuiltIns: 'usage',
+  loose: true,
+  useBuiltIns: 'entry',
   corejs: 3,
-  modules: isTest ? 'commonjs' : 'auto',
+  modules: false,
+  shippedProposals: true,
+  targets: {
+    node: '12',
+    browsers: [
+      'last 2 Chrome versions',
+      'last 2 Firefox versions',
+      'last 2 Safari versions',
+      'last 1 Edge versions',
+    ],
+  },
 }
 
 const presetTypescript = {
   isTSX: true,
   allExtensions: true,
-  onlyRemoveTypeImports: true,
 }
 
 const pluginEffector = { addLoc: true }
@@ -35,8 +44,9 @@ module.exports = {
     ['@babel/preset-typescript', presetTypescript],
   ],
   plugins: [
-    ['babel-plugin-styled-components', pluginStyledComponents],
-    ['effector/babel-plugin', pluginEffector],
     isDevelopment && 'react-refresh/babel',
+    isTest && '@babel/plugin-transform-modules-commonjs',
+    ['effector/babel-plugin', pluginEffector],
+    ['babel-plugin-styled-components', pluginStyledComponents],
   ].filter(Boolean),
 }

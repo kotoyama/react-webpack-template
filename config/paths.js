@@ -1,10 +1,10 @@
-const path = require('path')
 const fs = require('fs')
+const path = require('path')
 
 const appDirectory = fs.realpathSync(process.cwd())
-const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath)
+const resolveApp = (resolvePath) => path.resolve(appDirectory, resolvePath)
 
-const moduleFileExtensions = ['js', 'ts', 'tsx', 'json', 'jsx']
+const moduleFileExtensions = ['js', 'jsx', 'ts', 'tsx', 'json']
 
 const resolveModule = (resolveFn, filePath) => {
   const extension = moduleFileExtensions.find((extension) =>
@@ -29,6 +29,7 @@ module.exports = {
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
+  testsSetup: resolveModule(resolveApp, 'src/setupTests'),
   appNodeModules: resolveApp('node_modules'),
   publicUrlOrPath: '/',
 }

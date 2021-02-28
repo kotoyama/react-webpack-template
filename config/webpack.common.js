@@ -1,32 +1,37 @@
 const DotenvPlugin = require('dotenv-webpack')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
 
 const paths = require('./paths')
+const { moduleFileExtensions } = require('./paths')
 
 module.exports = {
-  context: paths.appPath,
   entry: paths.appIndexJs,
   output: {
-    path: paths.appBuild,
     publicPath: paths.publicUrlOrPath,
+    assetModuleFilename: 'assets/[name].[hash:8].[ext]',
   },
   resolve: {
     modules: [
       paths.appNodeModules,
       paths.appSrc,
     ],
-    extensions: paths.moduleFileExtensions.map((extension) => `.${extension}`),
-    plugins: [new TsconfigPathsPlugin()],
+    extensions: moduleFileExtensions.map((extension) => `.${extension}`),
+    plugins: [new TsconfigPathsPlugin({ configFile: paths.appTsConfig })],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)$/,
         include: paths.appSrc,
-        exclude: /node_modules/,
         loader: require.resolve('babel-loader'),
+        options: {
+          cacheDirectory: true,
+          cacheCompression: false,
+          compact: false,
+        },
       },
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
@@ -39,17 +44,14 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          require.resolve('babel-loader'),
           {
             loader: require.resolve('@svgr/webpack'),
+          },
+          {
+            loader: require.resolve('url-loader'),
             options: {
-              ref: true,
-              memo: true,
-              babel: false,
-              prettier: false,
-              svgoConfig: {
-                plugins: [{ removeViewBox: false }],
-              },
+              limit: 10000,
+              name: 'assets/[name].[contenthash:8].[ext]',
             },
           },
         ],
@@ -68,9 +70,28 @@ module.exports = {
       expand: true,
       systemvars: true,
     }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        configFile: paths.appTsConfig,
+      },
+    }),
     new ESLintPlugin({
       extensions: ['js', 'jsx', 'ts', 'tsx'],
+      eslintPath: require.resolve('eslint'),
       context: paths.appSrc,
+      cwd: paths.appPath,
+      resolvePluginsRelativeTo: __dirname,
+      cache: true,
     }),
   ],
+  performance: {
+    hints: false,
+  },
+  stats: {
+    modules: false,
+    chunks: false,
+    children: false,
+    timings: false,
+    version: false,
+  },
 }

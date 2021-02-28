@@ -1,11 +1,10 @@
-const webpack = require('webpack')
-const { merge } = require('webpack-merge')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
-const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
 const postcssNormalize = require('postcss-normalize')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+
+const webpack = require('webpack')
+const { merge } = require('webpack-merge')
 
 const paths = require('./paths')
 const common = require('./webpack.common')
@@ -28,6 +27,7 @@ module.exports = merge(common, {
     contentBasePublicPath: paths.publicUrlOrPath,
     publicPath: paths.publicUrlOrPath.slice(0, -1),
     clientLogLevel: 'none',
+    stats: 'errors-only',
     host: 'localhost',
     port: 3000,
     historyApiFallback: {
@@ -52,20 +52,20 @@ module.exports = merge(common, {
           {
             loader: require.resolve('postcss-loader'),
             options: {
-              ident: 'postcss',
-              postcssOptions: [],
-              plugins: [
-                [
-                  require.resolve('postcss-preset-env'),
-                  {
-                    autoprefixer: {
-                      flexbox: 'no-2009',
+              postcssOptions: {
+                plugins: [
+                  [
+                    require.resolve('postcss-preset-env'),
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
                     },
-                    stage: 3,
-                  },
+                  ],
+                  postcssNormalize(),
                 ],
-                postcssNormalize(),
-              ],
+              },
               sourceMap: true,
             },
           },
@@ -85,21 +85,21 @@ module.exports = merge(common, {
           },
           {
             loader: require.resolve('postcss-loader'),
-            options: {
-              ident: 'postcss',
-              postcssOptions: [],
-              plugins: [
-                [
-                  require.resolve('postcss-preset-env'),
-                  {
-                    autoprefixer: {
-                      flexbox: 'no-2009',
+             options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    require.resolve('postcss-preset-env'),
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
                     },
-                    stage: 3,
-                  },
+                  ],
+                  postcssNormalize(),
                 ],
-                postcssNormalize(),
-              ],
+              },
               sourceMap: true,
             },
           },
@@ -108,17 +108,11 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development'),
-      },
-    }),
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/,
     }),
-    new ErrorOverlayPlugin(),
     new FriendlyErrorsWebpackPlugin(),
-    new ForkTsCheckerWebpackPlugin(),
   ],
 })
