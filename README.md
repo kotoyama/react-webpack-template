@@ -7,7 +7,7 @@
 - [Babel](https://github.com/babel/babel)
 - [Webpack](https://github.com/webpack/webpack)
 - [React](https://github.com/facebook/react) & [React Router](https://reactrouter.com/)
-- [Effector](https://github.com/effector/effector)
+- [Effector](https://github.com/effector/effector) & [Effector React](https://github.com/effector/effector/tree/master/packages/effector-react)
 - [Styled Components](https://github.com/styled-components)
 - [ESLint](https://github.com/eslint/eslint) & [Prettier](https://github.com/prettier/prettier)
 - [Jest](https://github.com/facebook/jest) & [React Testing Library](https://github.com/testing-library/react-testing-library)
@@ -16,9 +16,10 @@
 
 - Hot reload
 - Pre-commit formatting
+- Conventional commits
 - Root alias support
 - Bundle visualizer
-- Friendly output for errors
+- Output errors in friendly format
 
 ## Available Scripts
 
@@ -30,6 +31,7 @@ In the project directory, you can run:
 - `yarn test` - launches the test runner
 - `yarn test:watch` - runs the tests in watch mode
 - `yarn test:coverage` - shows test coverage
+- `yarn commit` - make conventional commit
 
 ## Additional packages
 
