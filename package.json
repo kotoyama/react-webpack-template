@@ -9,7 +9,8 @@
     "build:live": "serve -s build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "commit": "git-cz"
   },
   "license": "MIT",
   "author": "kotoyama <t.me/kotoyama>",
@@ -22,6 +23,8 @@
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.1",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@svgr/webpack": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.9",
@@ -44,6 +47,7 @@
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "circular-dependency-plugin": "^5.2.2",
     "clean-webpack-plugin": "^3.0.0",
+    "commitizen": "^4.2.3",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.0",
     "css-minimizer-webpack-plugin": "^1.1.5",
@@ -82,8 +86,8 @@
     "react-refresh": "^0.9.0",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.1",
-    "tsconfig-paths-webpack-plugin": "^3.3.0",
     "ts-jest": "^26.4.4",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "^4.1.3",
     "url-loader": "^4.1.1",
     "webpack": "^5.10.1",
@@ -108,7 +112,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -116,5 +121,10 @@
       "prettier --write",
       "eslint --cache --fix"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
