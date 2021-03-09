@@ -1,4 +1,7 @@
 export const resetStyles = (): string => `
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -314,24 +317,25 @@ export const resetStyles = (): string => `
   input[type="month"] {
     -webkit-appearance: listbox;
   }
-  button{
+  button {
     border: none;
   }
   textarea {
     overflow: auto;
     resize: vertical;
   }
-  a{
+  a {
     display: block;
     text-decoration: none;
     color: black;
   }
-  html,body{
+  html,body {
     overflow: auto;
     height: 100%;
   }
   ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-thumb {
     width: 6px;
