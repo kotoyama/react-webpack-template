@@ -1,6 +1,6 @@
 {
-  "short_name": "Aviasales Test Task",
-  "name": "Frontend Test task for Aviasales team",
+  "short_name": "Webpack Template",
+  "name": "Webpack React Template",
   "icons": [
     {
       "src": "favicon.ico",
