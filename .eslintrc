@@ -7,8 +7,8 @@
     "project": "./tsconfig.json",
     "tsconfigRootDir": "./"
   },
-  "plugins": ["@typescript-eslint/eslint-plugin", "react"],
-  "extends": ["react-app", "prettier"],
+  "plugins": ["@typescript-eslint/eslint-plugin", "effector", "react"],
+  "extends": ["react-app", "prettier", "plugin:effector/recommended"],
   "env": {
     "es2020": true,
     "browser": true,
