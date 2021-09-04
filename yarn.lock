@@ -4839,15 +4839,15 @@ effector-logger@^0.9.0:
     just-debounce-it "^1.1.0"
     set-value "3.0.1"
 
-effector-react@^21.3.2:
-  version "21.3.2"
-  resolved "https://registry.yarnpkg.com/effector-react/-/effector-react-21.3.2.tgz#1ef52bf72fb304cb76e8bd1d7b75dd5f588ff661"
-  integrity sha512-+SGFgsfVnQ4cSwcjugjK+DnKVk7MDaNTOOzw2n1+8/c477w6YwFi4KusPnMfeWtaAdfidTmRn1EoYSvUhAX+EQ==
+effector-react@^22.0.4:
+  version "22.0.4"
+  resolved "https://registry.yarnpkg.com/effector-react/-/effector-react-22.0.4.tgz#4dcefdbf1167a0ad9a23fbabeec03a66a0f746de"
+  integrity sha512-4bWdcUXZlET5uKF/+9HNeB+s7tAPrD6V7RWbTJXeDCVSwF6gXgDQMjmla7DtHsbpZxB6hSsH98JfqFq7yXbXdw==
 
-effector@^21.8.11:
-  version "21.8.11"
-  resolved "https://registry.yarnpkg.com/effector/-/effector-21.8.11.tgz#fbe35fb754a9918fb33781a9a408b635218ff41a"
-  integrity sha512-yEdPMYsocx5rZb/zvnPrkM77tpbnTqWZ/W/JYWxojhUD+ZW04Mpa8ezL0X1LwceYnTHAj2RscLCKK9IFD85lcA==
+effector@^22.1.0:
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/effector/-/effector-22.1.0.tgz#67fb4c1d07467bb4bb47104d6dfe41ec76f45685"
+  integrity sha512-WvWfgp4S6f8vM08m1V1jtZ8ZVBsX72hhdc3AVVCOwINC9GT+zydq7qGLAfpqy5DkgJ1o/a5WS5ZsTuiE7JuGpg==
 
 ejs@^2.6.1:
   version "2.7.4"
