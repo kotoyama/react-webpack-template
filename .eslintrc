@@ -19,7 +19,10 @@
   "overrides": [
     {
       "files": ["**/*.spec.ts", "**/*.spec.tsx"],
-      "env": { "jest": true }
+      "env": { "jest": true },
+      "rules": {
+        "effector/no-getState": "off"
+      }
     },
     {
       "files": ["**/*.ts", "**/*.tsx"],

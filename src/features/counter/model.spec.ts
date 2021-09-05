@@ -1,4 +1,3 @@
-/* eslint-disable effector/no-getState */
 import { fork, allSettled } from 'effector'
 
 import { domain, $counter, increment, decrement } from './model'
