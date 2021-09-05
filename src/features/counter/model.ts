@@ -1,9 +1,11 @@
-import { createEvent, createStore } from 'effector'
-import { MouseEvent } from 'react'
+import { createDomain } from 'effector'
 
-export const increment = createEvent<MouseEvent<HTMLButtonElement>>()
-export const decrement = createEvent<MouseEvent<HTMLButtonElement>>()
+export const domain = createDomain()
 
-export const $counter = createStore(0)
+export const increment = domain.createEvent()
+export const decrement = domain.createEvent()
+
+export const $counter = domain
+  .createStore(0)
   .on(increment, (count) => count + 1)
   .on(decrement, (count) => count - 1)
