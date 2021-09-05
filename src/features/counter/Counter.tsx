@@ -4,24 +4,25 @@ import { useStore } from 'effector-react'
 import { $counter, increment, decrement } from './model'
 import './Counter.css'
 
-export const Counter: React.FC<{ className: string }> = ({ className }) => {
+export const Counter: React.FC = () => {
   const counter = useStore($counter)
-  const counterClasses = className ? `counter ${className}` : `counter`
 
   return (
-    <div className={counterClasses}>
+    <div className="counter hero__counter">
       <button
+        type="button"
         className="counter__button"
         aria-label="Increment value"
-        onClick={increment}
+        onClick={() => increment()}
       >
         +
       </button>
       <span className="counter__label">{counter}</span>
       <button
+        type="button"
         className="counter__button"
         aria-label="Decrement value"
-        onClick={decrement}
+        onClick={() => decrement()}
       >
         -
       </button>
