@@ -12,7 +12,7 @@ const common = require('./webpack.common')
 
 module.exports = merge(common, {
   mode: 'development',
-  devtool: 'cheap-module-source-map',
+  devtool: 'eval-source-map',
   output: {
     pathinfo: true,
     filename: 'js/bundle.js',
@@ -25,7 +25,6 @@ module.exports = merge(common, {
     compress: true,
     watchContentBase: true,
     contentBase: paths.appPublic,
-    contentBasePublicPath: paths.publicUrlOrPath,
     publicPath: paths.publicUrlOrPath.slice(0, -1),
     clientLogLevel: 'none',
     stats: 'errors-only',

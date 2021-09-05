@@ -60,7 +60,6 @@ module.exports = merge(common, {
         test: /\.css$/,
         exclude: /\.module\.css$/,
         use: [
-          require.resolve('style-loader'),
           MiniCssExtractPlugin.loader,
           {
             loader: require.resolve('css-loader'),

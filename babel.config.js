@@ -32,11 +32,6 @@ const presetTypescript = {
 
 const pluginEffector = { addLoc: true }
 
-const pluginStyledComponents = {
-  displayName: isDevelopment,
-  pure: true,
-}
-
 module.exports = {
   presets: [
     ['@babel/preset-env', presetEnv],
@@ -47,6 +42,5 @@ module.exports = {
     isDevelopment && 'react-refresh/babel',
     isTest && '@babel/plugin-transform-modules-commonjs',
     ['effector/babel-plugin', pluginEffector],
-    ['babel-plugin-styled-components', pluginStyledComponents],
   ].filter(Boolean),
 }
