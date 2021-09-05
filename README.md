@@ -1,5 +1,8 @@
 # 🚀 React Webpack Template
 
+[![dependencies](https://david-dm.org/kotoyama/react-webpack-template.svg)](https://david-dm.org/kotoyama/react-webpack-template)
+[![devDependencies](https://david-dm.org/kotoyama/react-webpack-template/dev-status.svg)](https://david-dm.org/kotoyama/react-webpack-template?type=dev)
+
 ## Stack
 
 - [TypeScript](https://www.typescriptlang.org/)
