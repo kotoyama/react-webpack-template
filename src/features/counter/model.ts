@@ -1,11 +1,11 @@
-import { createDomain } from 'effector'
+import { root } from 'root'
 
-export const domain = createDomain()
+export const domain = root.domain('counter')
 
-export const increment = domain.createEvent()
-export const decrement = domain.createEvent()
+export const increment = domain.event()
+export const decrement = domain.event()
 
 export const $counter = domain
-  .createStore(0)
+  .store(0)
   .on(increment, (count) => count + 1)
   .on(decrement, (count) => count - 1)

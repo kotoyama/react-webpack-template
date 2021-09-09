@@ -41,6 +41,17 @@ module.exports = {
   plugins: [
     isDevelopment && 'react-refresh/babel',
     isTest && '@babel/plugin-transform-modules-commonjs',
+    isTest && [
+      'transform-rename-import',
+      {
+        replacements: [
+          {
+            original: 'effector-react$',
+            replacement: 'effector-react/ssr',
+          },
+        ],
+      },
+    ],
     ['effector/babel-plugin', pluginEffector],
   ].filter(Boolean),
 }

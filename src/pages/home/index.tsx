@@ -11,7 +11,7 @@ export const Home: React.FC = () => (
       <img src={logo} className="hero__logo" alt="logo" />
       <Counter />
       <p>
-        Edit <code>src/App.js</code> and save to reload.
+        Edit <code>src/app.tsx</code> and save to reload.
       </p>
       <a
         className="hero__link"

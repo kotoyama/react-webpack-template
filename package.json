@@ -43,6 +43,7 @@
     "@typescript-eslint/parser": "^4.9.0",
     "babel-jest": "^26.5.2",
     "babel-loader": "^8.2.2",
+    "babel-plugin-transform-rename-import": "^2.3.0",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "circular-dependency-plugin": "^5.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
