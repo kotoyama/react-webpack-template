@@ -4,12 +4,12 @@ import { fork, Scope } from 'effector'
 import { fireEvent, render, screen } from '@testing-library/react'
 
 import { Counter } from './Counter'
-import { domain, increment, decrement } from './model'
+import { increment, decrement } from './model'
 
 let scope: Scope
 
 beforeEach(() => {
-  scope = fork(domain)
+  scope = fork()
 })
 
 const selectors = {

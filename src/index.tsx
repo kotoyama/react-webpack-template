@@ -4,10 +4,9 @@ import { fork } from 'effector'
 import { Provider } from 'effector-react/ssr'
 
 import './index.css'
-import { root } from './root'
 import { App } from './app'
 
-const scope = fork(root)
+const scope = fork()
 
 render(
   <Provider value={scope}>

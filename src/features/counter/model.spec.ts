@@ -1,6 +1,6 @@
 import { fork, allSettled } from 'effector'
 
-import { domain, $counter, increment, decrement } from './model'
+import { $counter, increment, decrement } from './model'
 
 describe('counter', () => {
   test('should increment/decrement counter', async () => {
@@ -10,8 +10,8 @@ describe('counter', () => {
     increment.watch(triggerInc)
     decrement.watch(triggerDec)
 
-    const scopeInc = fork(domain)
-    const scopeDec = fork(domain)
+    const scopeInc = fork()
+    const scopeDec = fork()
 
     await allSettled(increment, { scope: scopeInc })
     await allSettled(decrement, { scope: scopeDec })
