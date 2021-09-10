@@ -37,3 +37,8 @@ In the project directory, you can run:
 - `yarn test:watch` - runs tests in watch mode
 - `yarn test:coverage` - shows test coverage
 - `yarn commit` - makes conventional commit
+
+## References
+
+- [Frontend architecture](https://github.com/42-px/frontend-architecture)
+- [Testing with effector](https://www.notion.so/effector-c664bb08668f403a8c76ece470460512)
