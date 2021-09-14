@@ -13,7 +13,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "pre-commit": "yarn lint-staged",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "author": "kotoyama <t.me/kotoyama>",
@@ -26,8 +28,8 @@
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.1",
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.0",
     "@svgr/webpack": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.9",
@@ -73,7 +75,7 @@
     "fork-ts-checker-webpack-plugin": "^6.0.6",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^5.0.0",
-    "husky": "^4.2.5",
+    "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.0",
     "lint-staged": "^11.1.2",
@@ -104,12 +106,6 @@
     "effector-react": "^22.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,scss,md}": [
