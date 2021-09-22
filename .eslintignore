@@ -10,6 +10,9 @@ babel.config.js
 # commitlint
 commitlint.config.js
 
+# postcss
+postcss.config.js
+
 # static
 public
 
