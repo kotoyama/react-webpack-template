@@ -1,5 +1,6 @@
 import { createDomain } from 'effector'
-import { isBrowser } from 'lib/is-browser'
+
+import { isBrowser } from 'lib/isBrowser'
 
 export const root = createDomain('root')
 

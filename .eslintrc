@@ -8,7 +8,12 @@
     "tsconfigRootDir": "./",
     "extraFileExtensions": [".css"]
   },
-  "plugins": ["@typescript-eslint/eslint-plugin", "effector", "react"],
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "eslint-plugin-import-helpers",
+    "effector",
+    "react"
+  ],
   "extends": ["react-app", "prettier", "plugin:effector/recommended"],
   "env": {
     "es2020": true,
@@ -36,7 +41,22 @@
     "no-else-return": "warn",
     "no-console": ["warn"],
     "prefer-template": "warn",
-    "arrow-body-style": ["warn", "as-needed"]
+    "arrow-body-style": ["warn", "as-needed"],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          ["/^features/", "/^pages/", "/^lib/", "/^assets/", "/^ui/"],
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": {
+          "order": "ignore",
+          "ignoreCase": true
+        }
+      }
+    ]
   },
   "settings": {
     "react": {

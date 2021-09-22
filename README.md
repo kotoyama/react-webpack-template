@@ -30,9 +30,11 @@ In the project directory, you can run:
 - `yarn start` - runs app in development mode
 - `yarn build` - builds app for production
 - `yarn build:live` - runs build locally
-- `yarn format` - runs file formatting
-- `yarn lint` - runs linter
-- `yarn lint:fix` - runs linter with fixing rule
+- `yarn format` - runs file formatter
+- `yarn lint:code` - runs code linter
+- `yarn lint:code:fix` - runs code linter with fixing rule
+- `yarn lint:styles` - runs styles linter
+- `yarn lint:styles:fix` - runs styles linter with fixing rule
 - `yarn test` - launches test runner
 - `yarn test:watch` - runs tests in watch mode
 - `yarn test:coverage` - shows test coverage
