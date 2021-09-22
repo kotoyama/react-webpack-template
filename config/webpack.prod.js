@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const postcssNormalize = require('postcss-normalize')
+const postcssFlexbugsFixes = require('postcss-flexbugs-fixes')
 const { merge } = require('webpack-merge')
 
 const paths = require('./paths')
@@ -82,6 +83,7 @@ module.exports = merge(common, {
                       stage: 3,
                     },
                   ],
+                  postcssFlexbugsFixes(),
                   postcssNormalize(),
                 ],
               },
@@ -116,6 +118,7 @@ module.exports = merge(common, {
                       stage: 3,
                     },
                   ],
+                  postcssFlexbugsFixes(),
                   postcssNormalize(),
                 ],
               },

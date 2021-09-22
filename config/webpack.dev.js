@@ -3,6 +3,7 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
 const postcssNormalize = require('postcss-normalize')
+const postcssFlexbugsFixes = require('postcss-flexbugs-fixes')
 
 const webpack = require('webpack')
 const { merge } = require('webpack-merge')
@@ -63,6 +64,7 @@ module.exports = merge(common, {
                       stage: 3,
                     },
                   ],
+                  postcssFlexbugsFixes(),
                   postcssNormalize(),
                 ],
               },
@@ -97,6 +99,7 @@ module.exports = merge(common, {
                       stage: 3,
                     },
                   ],
+                  postcssFlexbugsFixes(),
                   postcssNormalize(),
                 ],
               },
