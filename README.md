@@ -43,5 +43,7 @@ In the project directory, you can run:
 ## References
 
 - [Frontend architecture](https://github.com/42-px/frontend-architecture)
-- [Testing with effector](https://www.notion.so/effector-c664bb08668f403a8c76ece470460512)
 - [Next + Effector (SSR)](https://www.notion.so/Effector-SSR-77c30d7c660b44f8b40d818c165b43e0)
+- Testing with effector
+  - [Тестирование на effector](https://www.notion.so/effector-c664bb08668f403a8c76ece470460512)
+  - [Инструкция: тестирование в Эффекторе](https://blog.kamyshev.me/effestor-tests/)
