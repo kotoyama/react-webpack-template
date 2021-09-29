@@ -11,7 +11,7 @@
     "lint:code": "eslint src/**/*.{js,jsx,ts,tsx}",
     "lint:code:fix": "eslint src/**/*.{js,jsx,ts,tsx} --fix",
     "lint:styles": "stylelint \"./**/*.css\"",
-    "lint:styles:fix": "stylelint \"./**/*.css\"",
+    "lint:styles:fix": "stylelint \"./**/*.css\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
