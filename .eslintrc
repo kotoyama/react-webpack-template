@@ -41,6 +41,7 @@
     "no-else-return": "warn",
     "no-console": ["warn"],
     "prefer-template": "warn",
+    "effector/no-watch": "off",
     "arrow-body-style": ["warn", "as-needed"],
     "import-helpers/order-imports": [
       "warn",
@@ -48,7 +49,7 @@
         "newlinesBetween": "always",
         "groups": [
           "module",
-          ["/^features/", "/^pages/", "/^lib/", "/^assets/", "/^ui/"],
+          ["/^features/", "/^pages/", "/^lib/", "/^ui/"],
           ["parent", "sibling", "index"]
         ],
         "alphabetize": {

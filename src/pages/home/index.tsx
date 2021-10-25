@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './index.css'
-import logo from 'assets/logo.svg'
+import logo from 'ui/icons/logo.svg'
 import { Counter } from 'features/counter'
 
 export const Home: React.FC = () => (
