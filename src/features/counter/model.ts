@@ -1,4 +1,4 @@
-import { root } from 'root'
+import { root } from '~/root'
 
 export const domain = root.domain('counter')
 

@@ -1,8 +1,9 @@
 import React from 'react'
 
 import './index.css'
-import logo from 'ui/icons/logo.svg'
-import { Counter } from 'features/counter'
+import { Counter } from '~/features/counter'
+
+import logo from '~/ui/icons/logo.svg'
 
 export const Home: React.FC = () => (
   <main className="page page--home">

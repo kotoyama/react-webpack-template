@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["./src/*"],
+    },
     "target": "es2016",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -18,7 +21,6 @@
     "pretty": true,
     "sourceMap": true
   },
-  "include": ["src"],
   "exclude": [
     "build",
     "config",
