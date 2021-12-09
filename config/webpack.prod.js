@@ -1,6 +1,7 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const postcssNormalize = require('postcss-normalize')
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes')
 const { merge } = require('webpack-merge')
@@ -137,6 +138,14 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[name].[contenthash:8].chunk.css',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: paths.appManifest,
+          to: './',
+        },
+      ],
     }),
   ],
 })
