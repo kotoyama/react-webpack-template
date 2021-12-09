@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStore, useEvent } from 'effector-react/ssr'
 
-import './Counter.css'
 import { $counter, increment, decrement } from './model'
+import './Counter.css'
 
 export const Counter: React.FC = () => {
   const counter = useStore($counter)

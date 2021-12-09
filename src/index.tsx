@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { fork } from 'effector'
 import { Provider } from 'effector-react/ssr'
 
-import './index.css'
+import './ui/index.css'
 import { App } from './app'
 
 const scope = fork()

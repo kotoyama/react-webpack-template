@@ -1,7 +1,7 @@
 .counter {
   display: flex;
   align-items: center;
-  color: #ff8c00;
+  color: var(--color-scale-orange);
 }
 
 .counter__label {
@@ -16,19 +16,15 @@
   width: 40px;
   height: 40px;
   font-size: 32px;
-  color: #ff8c00;
-  cursor: pointer;
+  color: var(--color-scale-orange);
   background: none;
-  border: none;
   border: 2px solid transparent;
-  outline: none;
-  appearance: none;
 }
 
 .counter__button:focus {
-  border: 2px solid rgba(255, 140, 0, 0.4);
+  border: 2px solid var(--color-btn-focus-border);
 }
 
 .counter__button:active {
-  background-color: rgba(255, 140, 0, 0.1);
+  background-color: var(--color-btn-active-bg);
 }

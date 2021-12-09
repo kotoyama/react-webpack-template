@@ -1,3 +1,8 @@
+.page {
+  height: 100%;
+  min-height: 100%;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -5,9 +10,9 @@
   justify-content: center;
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
-  color: #000;
+  color: var(--color-scale-black);
   text-align: center;
-  background-color: #fff;
+  background-color: var(--color-scale-white);
 }
 
 .hero__logo {
@@ -16,12 +21,12 @@
 }
 
 .hero__link {
-  color: #ff8c00;
+  color: var(--color-scale-orange);
 }
 
 @media (prefers-color-scheme: dark) {
   .hero {
-    color: #fff;
-    background-color: #282c34;
+    color: var(--color-scale-white);
+    background-color: var(--color-scale-gray);
   }
 }

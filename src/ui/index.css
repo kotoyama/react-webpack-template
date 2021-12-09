@@ -1,11 +1,15 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+@import './normalize.css';
+
+:root {
+  --color-scale-white: #ffffff;
+  --color-scale-orange: #ff8c00;
+  --color-scale-black: #000000;
+  --color-scale-gray: #282c34;
+  --color-btn-focus-border: rgba(255, 140, 0, 0.4);
+  --color-btn-active-bg: rgba(255, 140, 0, 0.1);
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,9 +20,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.page {
-  height: 100%;
-  min-height: 100%;
 }
