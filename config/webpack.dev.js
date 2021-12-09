@@ -4,8 +4,6 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
 const postcssNormalize = require('postcss-normalize')
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes')
-
-const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 
 const paths = require('./paths')
@@ -22,18 +20,23 @@ module.exports = merge(common, {
   devServer: {
     hot: true,
     open: true,
-    quiet: true,
     compress: true,
-    watchContentBase: true,
-    contentBase: paths.appPublic,
-    publicPath: paths.publicUrlOrPath.slice(0, -1),
-    clientLogLevel: 'none',
-    stats: 'errors-only',
     host: 'localhost',
     port: 3000,
+    static: {
+      directory: paths.appPublic,
+      watch: true,
+    },
+    devMiddleware: {
+      stats: 'errors-only',
+      publicPath: paths.publicUrlOrPath.slice(0, -1),
+    },
     historyApiFallback: {
       disableDotRule: true,
       index: paths.publicUrlOrPath,
+    },
+    client: {
+      logging: 'none',
     },
   },
   module: {
@@ -111,7 +114,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/,
