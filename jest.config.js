@@ -17,5 +17,8 @@ module.exports = {
     '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$': '<rootDir>/config/jest/fileTransform.js'
   },
+  setupFiles: [
+    'dotenv/config'
+  ],
   resetMocks: true,
 }
