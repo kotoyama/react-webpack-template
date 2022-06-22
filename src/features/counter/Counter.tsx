@@ -2,7 +2,7 @@ import React from 'react'
 import { useStore, useEvent } from 'effector-react/ssr'
 
 import { $counter, increment, decrement } from './model'
-import './Counter.css'
+import styles from './Counter.module.css'
 
 export const Counter: React.FC = () => {
   const counter = useStore($counter)
@@ -10,23 +10,23 @@ export const Counter: React.FC = () => {
   const decrementFn = useEvent(decrement)
 
   return (
-    <div className="counter hero__counter">
+    <div className={styles.counter}>
       <button
         type="button"
         data-testid="increment"
-        className="counter__button"
+        className={styles.button}
         aria-label="Increment value"
         onClick={() => incrementFn()}
       >
         +
       </button>
-      <span data-testid="counter" className="counter__label">
+      <span data-testid="counter" className={styles.label}>
         {counter}
       </span>
       <button
         type="button"
         data-testid="decrement"
-        className="counter__button"
+        className={styles.button}
         aria-label="Decrement value"
         onClick={() => decrementFn()}
       >

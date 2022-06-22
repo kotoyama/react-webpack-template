@@ -4,12 +4,12 @@
   color: var(--color-scale-orange);
 }
 
-.counter__label {
+.label {
   width: 70px;
   font-size: 48px;
 }
 
-.counter__button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,10 +21,10 @@
   border: 2px solid transparent;
 }
 
-.counter__button:focus {
+.button:focus {
   border: 2px solid var(--color-btn-focus-border);
 }
 
-.counter__button:active {
+.button:active {
   background-color: var(--color-btn-active-bg);
 }

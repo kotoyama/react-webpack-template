@@ -15,12 +15,12 @@
   background-color: var(--color-scale-white);
 }
 
-.hero__logo {
+.logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-.hero__link {
+.link {
   color: var(--color-scale-orange);
 }
 
