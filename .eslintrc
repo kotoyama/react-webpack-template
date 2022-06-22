@@ -43,13 +43,17 @@
     "prefer-template": "warn",
     "effector/no-watch": "off",
     "arrow-body-style": ["warn", "as-needed"],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always",
         "groups": [
           "module",
-          ["/^~/app/", "/^~/features/", "/^~/pages/", "/^~/lib/", "/^~/ui/"],
+          ["/^~/entities/", "/^~/features/", "/^~/pages/", "/^~/shared/"],
           ["parent", "sibling", "index"]
         ],
         "alphabetize": {
