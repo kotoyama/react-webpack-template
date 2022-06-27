@@ -1,4 +1,8 @@
 {
-  "extends": ["stylelint-config-recommended", "stylelint-config-recess-order"],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-recess-order",
+    "stylelint-config-css-modules"
+  ],
   "plugins": ["stylelint-order"]
 }

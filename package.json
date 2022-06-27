@@ -93,6 +93,7 @@
     "react-refresh": "^0.14.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.9.1",
+    "stylelint-config-css-modules": "^4.1.0",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-recommended": "^8.0.0",
     "stylelint-order": "^5.0.0",
