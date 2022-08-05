@@ -12,9 +12,18 @@
     "@typescript-eslint/eslint-plugin",
     "eslint-plugin-import-helpers",
     "effector",
+    "prettier",
+    "jsx-a11y",
+    "react-hooks",
     "react"
   ],
-  "extends": ["react-app", "prettier", "plugin:effector/recommended"],
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:effector/recommended"
+  ],
   "env": {
     "es2020": true,
     "browser": true,
@@ -42,6 +51,7 @@
     "no-console": ["warn"],
     "prefer-template": "warn",
     "effector/no-watch": "off",
+    "prettier/prettier": "warn",
     "arrow-body-style": ["warn", "as-needed"],
     "@typescript-eslint/no-unused-vars": [
       "error",
