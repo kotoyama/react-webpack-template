@@ -15,9 +15,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "commit": "git-cz",
-    "pre-commit": "yarn lint-staged",
-    "prepare": "husky install"
+    "commit": "git-cz"
   },
   "license": "MIT",
   "author": "kotoyama <t.me/kotoyama>",
@@ -79,11 +77,10 @@
     "fork-ts-checker-webpack-plugin": "^7.2.11",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.1",
-    "lint-staged": "^13.0.2",
     "mini-css-extract-plugin": "^2.6.1",
+    "nano-staged": "^0.8.0",
     "postcss": "^8.4.14",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^7.0.0",
@@ -91,6 +88,7 @@
     "postcss-preset-env": "^7.7.1",
     "prettier": "^2.7.1",
     "react-refresh": "^0.14.0",
+    "simple-git-hooks": "^2.8.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.9.1",
     "stylelint-config-css-modules": "^4.1.0",
@@ -114,10 +112,11 @@
     "react-dom": "^17.0.2",
     "smoothscroll-polyfill": "^0.4.4"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,scss,md}": [
-      "prettier --write"
-    ]
+  "simple-git-hooks": {
+    "pre-commit": "yarn nano-staged"
+  },
+  "nano-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
   },
   "config": {
     "commitizen": {
