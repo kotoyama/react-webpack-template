@@ -3,8 +3,8 @@ import { Provider } from 'effector-react/ssr'
 import { fork, Scope } from 'effector'
 import { fireEvent, render, screen } from '@testing-library/react'
 
+import { increment, decrement } from '../model'
 import { Counter } from './Counter'
-import { increment, decrement } from './model'
 
 let scope: Scope
 

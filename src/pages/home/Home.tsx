@@ -5,7 +5,7 @@ import logo from '~/shared/ui/svg/logo.svg'
 
 import styles from './Home.module.css'
 
-export const Home: React.FC = () => (
+export const HomePage: React.FC = () => (
   <main className={styles.page}>
     <section className={styles.hero}>
       <img src={logo} className={styles.logo} alt="logo" />

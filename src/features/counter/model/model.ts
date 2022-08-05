@@ -1,6 +1,6 @@
 import { root } from '~/root'
 
-export const domain = root.domain('counter')
+export const domain = root.createDomain('counter')
 
 export const increment = domain.createEvent()
 export const decrement = domain.createEvent()
