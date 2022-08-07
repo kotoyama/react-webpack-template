@@ -111,10 +111,11 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "simple-git-hooks": {
-    "pre-commit": "yarn nano-staged"
+    "pre-commit": "npx nano-staged"
   },
   "nano-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+    "*.{js,ts}": "prettier --write",
+    "*.css": "stylelint"
   },
   "config": {
     "commitizen": {
