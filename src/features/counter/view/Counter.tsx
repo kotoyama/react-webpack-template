@@ -4,7 +4,7 @@ import { useUnit } from 'effector-react'
 import { $counter, increment, decrement } from '../model'
 import styles from './Counter.module.css'
 
-export const Counter: React.FC = () => {
+export const Counter = () => {
   const [counter, incFn, decFn] = useUnit([$counter, increment, decrement])
 
   return (

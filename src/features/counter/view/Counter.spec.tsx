@@ -18,7 +18,7 @@ const selectors = {
   decrementBtn: async () => screen.getByTestId(/decrement/i),
 }
 
-const Wrapper: React.FC = ({ children }) => (
+const Wrapper: React.FC<React.PropsWithChildren> = ({ children }) => (
   <Provider value={scope}>{children}</Provider>
 )
 

@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from 'react'
-import { render } from 'react-dom'
-import { fork } from 'effector'
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'effector-react/ssr'
+import { fork } from 'effector'
 
 import '~/shared/ui/index.css'
 
@@ -12,9 +13,11 @@ loadPolyfills()
 
 const scope = fork()
 
-render(
+const container = document.getElementById('root')
+const root = createRoot(container!)
+
+root.render(
   <Provider value={scope}>
     <App />
   </Provider>,
-  document.getElementById('root'),
 )
