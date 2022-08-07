@@ -14,11 +14,10 @@
 ## Features
 
 - Hot reload
-- Pre-commit formatting
 - Conventional commits
-- Root alias support
-- Bundle visualizer
 - Output errors in friendly format
+- Root alias support
+- React 18 support
 
 ## Available Scripts
 
@@ -41,6 +40,4 @@ In the project directory, you can run:
 
 - [Frontend architecture](https://github.com/42-px/frontend-architecture)
 - [Next + Effector (SSR)](https://www.notion.so/Effector-SSR-77c30d7c660b44f8b40d818c165b43e0)
-- Testing with effector
-  - [Тестирование на effector](https://www.notion.so/effector-c664bb08668f403a8c76ece470460512)
-  - [Инструкция: тестирование в Эффекторе](https://blog.kamyshev.me/effestor-tests/)
+- [Testing with effector](https://www.notion.so/effector-c664bb08668f403a8c76ece470460512)
