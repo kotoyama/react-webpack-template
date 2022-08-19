@@ -34,27 +34,36 @@ module.exports = {
         },
       },
       {
-        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader: require.resolve('url-loader'),
-        options: {
-          limit: 10000,
-          name: 'assets/[name].[contenthash:8].[ext]',
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.webp$/],
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10000,
+          },
         },
+        generator: {
+          filename: 'assets/[name].[contenthash:8][ext]'
+        }
       },
       {
         test: /\.svg$/,
-        use: [
+        oneOf: [
           {
-            loader: require.resolve('@svgr/webpack'),
+            dependency: { not: ['url'] },
+            use: [require.resolve('@svgr/webpack'), require.resolve('new-url-loader')],
           },
           {
-            loader: require.resolve('url-loader'),
-            options: {
-              limit: 10000,
-              name: 'assets/[name].[contenthash:8].[ext]',
+            type: 'asset',
+            parser: {
+              dataUrlCondition: {
+                maxSize: 10000,
+              },
             },
+            generator: {
+              filename: 'assets/[name].[contenthash:8][ext]'
+            }
           },
-        ],
+        ]
       },
     ],
     strictExportPresence: true,
