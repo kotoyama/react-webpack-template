@@ -7,13 +7,13 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage",
     "format": "prettier --write .",
     "lint:code": "eslint \"./src/**/*.{ts,tsx}\"",
     "lint:code:fix": "eslint \"./src/**/*.{ts,tsx}\" --fix",
     "lint:css": "stylelint \"./src/**/*.css\"",
     "lint:css:fix": "stylelint \"./src/**/*.css\" --fix",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
     "commit": "cz"
   },
   "dependencies": {
