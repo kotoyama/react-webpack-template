@@ -1,26 +1,21 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
 node_modules
 /.pnp
 .pnp.js
 
-# testing
 coverage
 
-# production
-build
 dist
+build
 
-# misc
 .idea
 .vscode
 .DS_Store
 
-# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# cache
 .eslintcache
+
+.env.development
+.env.production

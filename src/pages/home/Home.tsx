@@ -1,6 +1,5 @@
-import React from 'react'
-
 import { Counter } from '~/features/counter'
+
 import logo from '~/shared/ui/icons/logo.svg'
 
 import styles from './Home.module.css'

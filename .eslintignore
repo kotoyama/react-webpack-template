@@ -1,38 +1,6 @@
-# dependencies
 node_modules
-
-# webpack
-config
-
-# babel
-babel.config.js
-
-# commitlint
-commitlint.config.js
-
-# postcss
-postcss.config.js
-
-# static
-public
-
-# testing
 coverage
-jest.config.js
-
-# production
-build
 dist
-
-# env
-.env
-
-# misc
-.idea
-.vscode
-.DS_Store
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+build
+.env.development
+.env.production

@@ -1,4 +1,4 @@
-import React from 'react'
+import { lazy as lazyLoad } from 'react'
 
 /**
  * React.lazy with named export
@@ -11,7 +11,7 @@ export const lazy = <T extends Record<string, React.FunctionComponent>>(
   loader: () => Promise<T>,
   name: keyof T,
 ) =>
-  React.lazy(async () => {
+  lazyLoad(async () => {
     const module = await loader()
     return { default: module[name] }
   })

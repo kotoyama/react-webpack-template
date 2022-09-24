@@ -1,11 +1,12 @@
 import { fork, allSettled } from 'effector'
+import { describe, expect, it, vi } from 'vitest'
 
 import { $counter, increment, decrement } from './model'
 
 describe('counter', () => {
-  test('should increment/decrement counter', async () => {
-    const triggerInc = jest.fn()
-    const triggerDec = jest.fn()
+  it('should increment/decrement counter', async () => {
+    const triggerInc = vi.fn()
+    const triggerDec = vi.fn()
 
     increment.watch(triggerInc)
     decrement.watch(triggerDec)

@@ -1,6 +1,6 @@
 {
-  "short_name": "Webpack Template",
-  "name": "Webpack React Template",
+  "short_name": "Vite Template",
+  "name": "Vite React Template",
   "icons": [
     {
       "src": "favicon.ico",

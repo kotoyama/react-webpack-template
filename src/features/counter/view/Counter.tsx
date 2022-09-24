@@ -1,4 +1,3 @@
-import React from 'react'
 import { useUnit } from 'effector-react'
 
 import { $counter, increment, decrement } from '../model'

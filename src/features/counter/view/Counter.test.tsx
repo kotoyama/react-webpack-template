@@ -1,7 +1,8 @@
-import React from 'react'
-import { Provider } from 'effector-react/ssr'
-import { fork, Scope } from 'effector'
 import { fireEvent, render, screen } from '@testing-library/react'
+import { fork, Scope } from 'effector'
+import { Provider } from 'effector-react/scope'
+import { FC, PropsWithChildren } from 'react'
+import { describe, beforeEach, expect, it, vi } from 'vitest'
 
 import { increment, decrement } from '../model'
 import { Counter } from './Counter'
@@ -18,13 +19,13 @@ const selectors = {
   decrementBtn: async () => screen.getByTestId(/decrement/i),
 }
 
-const Wrapper: React.FC<React.PropsWithChildren> = ({ children }) => (
+const Wrapper: FC<PropsWithChildren> = ({ children }) => (
   <Provider value={scope}>{children}</Provider>
 )
 
 describe('Counter', () => {
-  const incrementFn = jest.fn()
-  const decrementFn = jest.fn()
+  const incrementFn = vi.fn()
+  const decrementFn = vi.fn()
 
   increment.watch(incrementFn)
   decrement.watch(decrementFn)
@@ -34,7 +35,7 @@ describe('Counter', () => {
     decrementFn.mockReset()
   })
 
-  test('should render properly with default states', async () => {
+  it('should render properly with default states', async () => {
     render(<Counter />, { wrapper: Wrapper })
 
     const incrementBtn = await selectors.incrementBtn()
@@ -51,7 +52,7 @@ describe('Counter', () => {
     expect(decrementBtn).toHaveAttribute('type', 'button')
   })
 
-  test('should render properly with increment', async () => {
+  it('should render properly with increment', async () => {
     render(<Counter />, { wrapper: Wrapper })
 
     const incrementBtn = await selectors.incrementBtn()
@@ -63,7 +64,7 @@ describe('Counter', () => {
     expect(counterLabel).toHaveTextContent('1')
   })
 
-  test('should render properly with decrement', async () => {
+  it('should render properly with decrement', async () => {
     render(<Counter />, { wrapper: Wrapper })
 
     const decrementBtn = await selectors.decrementBtn()
