@@ -3,7 +3,6 @@ import path from 'node:path'
 import react from '@vitejs/plugin-react'
 import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import { checker } from 'vite-plugin-checker'
-import eslint from 'vite-plugin-eslint'
 import stylelint from 'vite-plugin-stylelint'
 import svgr from 'vite-plugin-svgr'
 
@@ -35,7 +34,6 @@ export default defineConfig(({ mode }) => {
       splitVendorChunkPlugin(),
       checker({ typescript: true }),
       stylelint({ fix: true }),
-      eslint({ fix: true }),
       svgr(),
     ],
     resolve: {
