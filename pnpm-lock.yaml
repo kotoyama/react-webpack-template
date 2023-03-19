@@ -1,8 +1,5 @@
 lockfileVersion: 5.4
 
-overrides:
-  '@types/testing-library__jest-dom': github:zoontek/types-testing-library-vitest-dom
-
 specifiers:
   '@commitlint/cli': ^17.4.4
   '@commitlint/config-conventional': ^17.4.4
@@ -5645,7 +5642,7 @@ packages:
     dev: true
 
   github.com/zoontek/types-testing-library-vitest-dom/0a0de96e76b403e1808429506fad50f90d28fced:
-    resolution: {tarball: https://codeload.github.com/zoontek/types-testing-library-vitest-dom/tar.gz/0a0de96e76b403e1808429506fad50f90d28fced}
+    resolution: {registry: https://registry.npmjs.org/, tarball: https://codeload.github.com/zoontek/types-testing-library-vitest-dom/tar.gz/0a0de96e76b403e1808429506fad50f90d28fced}
     name: '@types/testing-library__jest-dom'
     version: 5.14.5
     dev: true
